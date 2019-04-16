@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.1'
+ruby '2.6.2'
 
-# Use activeadmin for administrate the database 
+# Use activeadmin for administrate the database
 gem 'activeadmin'
 # Use devise for authentification
 gem 'devise'
