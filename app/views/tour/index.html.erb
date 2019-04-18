@@ -1,9 +1,33 @@
 <h1>Tour#index</h1>
 <p>Find me in app/views/tour/index.html.erb</p>
 
-<% @tours.each do |tour| %>
-  <p><%= tour.name %></p>
-  <p><%= tour.locomotion %></p>
-  <p><%= tour.duration %></p>
-  <p><%= tour.place %></p>
-<% end %>
+<section class ="destinations">
+  <div class="destinations-banner">
+    <div class="destinations-banner__title">
+      <h1>destinations</h1>
+    </div>
+    <div class="destinations-banner__subtitle">
+      <p>Partez à la découverte des paysages et des peuples du nord Vietnam avec
+        Happy Family Travel ! Nous mettrons tout notre savoir-faire à votre
+        service pour vous offrir une expérience unique et adaptée à vos attentes !
+      </p>
+    </div>
+  </div>
+  <div class="trip-preview-container">
+    <% @tours.each do |tour| %>
+    <div class="trip">
+      <div class="trip__hidden-description">
+        <p><%= tour.description %></p>
+      </div>
+      <div class="trip__title">
+        <h3><%= tour.name %></h3>
+      </div>
+      <div class="trip__link">
+        <%= link_to root_path do %>
+          <p>En savoir plus</p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</section>
