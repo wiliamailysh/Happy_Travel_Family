@@ -1,2 +1,9 @@
 <h1>Tour#index</h1>
 <p>Find me in app/views/tour/index.html.erb</p>
+
+<% @tours.each do |tour| %>
+  <p><%= tour.name %></p>
+  <p><%= tour.locomotion %></p>
+  <p><%= tour.duration %></p>
+  <p><%= tour.place %></p>
+<% end %>
