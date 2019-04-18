@@ -1,3 +1,87 @@
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//// Banner image with quotation ////
+
+#banner {
+  height: 500px;
+  background: image-url('image.jpg') right top / cover; // works
+}
+
+#banner div {
+  font-size: 3em;
+  font-weight: 450;
+  color: white;
+  text-align: right;
+  padding-top: 20vh;
+  margin-right: 8vw;
+
+  // border: 2px solid red;
+}
+
+#banner p {
+  font-size: 2.2em;
+  font-weight: 450;
+  font-style: italic;
+  color: white;
+  text-align: right;
+  margin-right: 8vw;
+
+
+  // border: 2px solid red;
+}
+
+//////////////////////////
+
+//// Slogan banner ////
+
+#slogan {
+  background: #F8F5EF;
+  height: 50vh;
+}
+
+#slogan h2 {
+  margin: 0;
+  padding: 3vh 0 2vh 0;
+
+  font-weight: 750;
+  text-align: center;
+
+  // border: 2px solid red;
+}
+
+#slogan hr {
+  width: 15%;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+
+  padding-left: 15%;
+  padding-right: 15%;
+  border: 2px solid green;
+}
+
+.feature-agency {
+  width: 20%;
+
+  border: 2px solid red;
+}
+
+#favourites {
+  display: none;
+}
+
+#team {
+  display: none;
+}
+
+#destinations {
+  display: none;
+}
+
+#comments {
+  display: none;
+}

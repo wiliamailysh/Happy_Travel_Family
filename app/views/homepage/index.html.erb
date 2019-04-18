@@ -1,7 +1,7 @@
  <section id="banner">
-  <blockquote>
-" Voyager sans rencontrer l’autre, ce n’est pas voyager, c’est se déplacer "
-  </blockquote>
+  <div>
+" Voyager sans rencontrer l’autre,<br> ce n’est pas voyager, c’est se déplacer "
+  </div>
   <p>
     Alexandra David-Nee
   </p>
@@ -9,9 +9,31 @@
 
 <section id="slogan">
   <h2>FAMILIAL, SUR-MESURE ET AUTHENTIQUE !</h2>
-  <h3>Equipe locale & professionnelle</h3>
-  <h3>Hors des sentiers battus</h3>
-  <h3>Engagement pour un tourisme responsable & durable</h3>
+  <hr>
+
+<div class="feature-container">
+  <div class="feature-agency">
+    <div class="feature-image">
+      <%= image_tag '/assets/logo1.webp' %>
+    </div>
+    <h3>Equipe locale & professionnelle</h3>
+  </div>
+
+  <div class="feature-agency">
+    <div class="feature-image">
+      <%= image_tag '/assets/logo2.webp' %>
+    </div>
+    <h3>Hors des sentiers battus</h3>
+  </div>
+
+  <div class="feature-agency">
+    <div class="feature-image">
+      <%= image_tag '/assets/logo3.webp' %>
+    </div>
+    <h3>Engagement pour un tourisme responsable & durable</h3>
+  </div>
+</div>
+
   <p>La volonté d'Happy Familly Travel, c'est de mettre l'Humain au cœur de ses
     offres touristiques et de ses projets, pour vous offrir une expérience
     inoubliable d'échanges et de partages dans une ambiance résolument
@@ -21,6 +43,7 @@
     Pour cela, nous vous invitons à découvrir nos circuits au plus près des
     peuples sillonnant les magnifiques contrées du nord Vietnam !
   </p>
+
 </section>
 
 <section id="favourites">
