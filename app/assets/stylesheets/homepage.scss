@@ -2,6 +2,221 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/// Border test ///
+/// Copy @include border to check the size and position of an element ///
+
+html,body {
+  margin: 0;
+}
+
+@mixin border {
+  border: 1px solid red;
+}
+
+@mixin rounded-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/// Colors ///
+$color-primary: white;
+$color-secondary: #F8F5EF;
+$color-tertiary: #A8172E;
+$color-dark: #000000;
+
+.main-banner {
+  background: image-url('image.jpg') right top / cover; // works
+  height: 60vh;
+  // padding-right: 10vw;
+  // padding-top: 10vh;
+  &__quote {
+    color: $color-primary;
+    font-size: 2.5rem;
+    text-align: right;
+    padding-right: 10vw;
+    padding-top: 10vh;
+  }
+  &__author {
+    color: $color-primary;
+    text-align: right;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-right: 10vw;
+    // @include border;
+  }
+}
+
+.slogan-banner {
+  background-color: $color-secondary;
+  height: 40vh;
+  &__title {
+    padding-top: 10vh;
+    text-align: center;
+    margin: 0;
+  }
+  &__features {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    margin: auto;
+  }
+  &__message {
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.feature {
+  display: flex;
+  &__image {
+
+  }
+  &__text {
+    width: 12vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-dark;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+.favourites-banner {
+  &__title {
+
+  }
+  &__trip {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.trip {
+  background: image-url('image.jpg') right top / cover; // works
+  height: 400px;
+  width: 600px;
+  &__hidden-description {
+
+  }
+  &__title {
+
+  }
+  &__link {
+
+  }
+}
+
+.team-banner {
+  background: image-url('image.jpg') right top / cover; // works
+  height: 25vh;
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    margin: auto;
+    background: rgba($color-secondary,.6);
+    width: 60%;
+    height: 25%;
+  }
+}
+
+.member-grid {
+  display: flex;
+  justify-content: space-around;
+  background: $color-secondary;
+}
+
+.member-card {
+  &__image img {
+    @include rounded-image;
+  }
+  &__name {
+
+  }
+  &__social-link a img {
+    height: 50px;
+  }
+  &__quote {
+
+  }
+}
+
+/// Quite the same as team-banner ///
+.destinations-banner {
+  background: image-url('image.jpg') right top / cover; // works
+  height: 25vh;
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    margin: auto;
+    background: rgba($color-secondary,.6);
+    width: 60%;
+    height: 25%;
+  }
+}
+
+.trip-preview-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comments {
+  background: $color-secondary;
+  &__title {
+
+  }
+  &__customer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.customer {
+  &__image img {
+    @include rounded-image;
+  }
+  &__testimony-title {
+
+  }
+  &__testimony-text {
+
+  }
+  &__name {
+
+  }
+  &__testimony-date {
+
+  }
+}
+
+/// General ///
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: $color-dark;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+hr {
+  width: 20%;
+  color: $color-tertiary;
+}
+
 //// Banner image with quotation ////
 
 #banner {
