@@ -6,17 +6,65 @@
 /// Copy @include border to check the size and position of an element ///
 
 //////////////
+/// FONTS ///
+//////////////
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+//////////////
 /// MIXINS ///
 //////////////
 
-@mixin border {
-  border: 1px solid red;
+// @mixin btn {
+//   border: 2px solid $color-primary;
+//   height: 40px;
+//   width: 165px;
+//   p {
+//     text-decoration: none;
+//     color: red;
+//   }
+// }
+
+@mixin title($size) {
+  font-size: $size;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+  color: $color-primary;
 }
+
+@mixin banner($image) {
+    // background: image-url('homepage/favourites-banner.jpg') right top / cover; // works
+    background: image-url('homepage/#{$image}'); // works
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    &__title {
+      text-align: center;
+      h1 {
+        padding: 45px;
+        margin: 0;
+      }
+    }
+    &__subtitle {
+      margin: auto;
+      background: rgba($color-secondary,.6);
+      width: 60%;
+      height: 25%;
+    }
+  }
 
 @mixin rounded-image {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+@mixin border {
+  border: 1px solid red;
 }
 
 /////////////////
@@ -37,20 +85,24 @@ $color-menu: #726277;
 
 html,body {
   margin: 0;
+  font-family: 'Raleway', sans-servif;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 3em;
+  @include title(62px);
 }
 
 h2 {
   font-size: 2em;
-  font-weight: bold;
   color: $color-dark;
 }
 
 h3 {
-
+  @include title(20px);
 }
 
 h4 {
@@ -82,7 +134,7 @@ a.anchor  {
 nav {
   position: fixed;
   top: 0;
-  height: 95px;
+  height: 10vh;
   width: 100%;
   background: $color-primary;
 }
@@ -132,9 +184,6 @@ nav {
 ////////////////
 /// HOMEPAGE ///
 ////////////////
-
-// background: rgb(0,212,255);
-// background:
 
 .main-banner {
   // background: #eb01a5;
@@ -195,7 +244,6 @@ nav {
   }
   &__text {
     width: 12vw;
-    text-transform: uppercase;
     font-weight: bold;
     color: $color-dark;
     font-size: 1.4em;
@@ -204,52 +252,59 @@ nav {
 }
 
 .favourites-banner {
-  background: image-url('image.jpg') right top / cover; // works
-  height: 35vh;
-  &__title {
-    text-align: center;
-  }
-  &__subtitle {
-    margin: auto;
-    background: rgba($color-secondary,.6);
-    width: 60%;
-    height: 25%;
-  }
+  @include banner("favourites-banner.jpg");
+}
+
+.favourites {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56vh;
 }
 
 .trip {
-  background: image-url('image.jpg') right top / cover; // works
-  height: 400px;
-  width: 600px;
+  background: image-url("image.jpg") right top / cover;
+  // , image-url('image.jpg') right top / cover; // works
+  height: 312px;
+  width: 489px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
   &__hidden-description {
-
+    display: none;
   }
   &__title {
 
   }
   &__link {
-
+    border: 2px solid $color-primary;
+    height: 40px;
+    width: 165px;
+    color: $color-primary;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 15px;
+    display: flex;
+    p {
+      margin: auto;
+    }
   }
 }
 
 .team-banner {
-  background: image-url('image.jpg') right top / cover; // works
-  height: 35vh;
-  &__title {
-    text-align: center;
-  }
-  &__subtitle {
-    margin: auto;
-    background: rgba($color-secondary,.6);
-    width: 60%;
-    height: 25%;
-  }
+  @include banner("team-banner.jpg")
 }
 
 .member-grid {
   display: flex;
   justify-content: space-around;
   background: $color-secondary;
+  height: 800px;
 }
 
 .member-card {
@@ -302,7 +357,7 @@ nav {
     @include rounded-image;
   }
   &__testimony-title {
-
+    font-family: 'Anton', sans-serif;
   }
   &__testimony-text {
 
