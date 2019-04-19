@@ -252,7 +252,7 @@ nav {
 }
 
 .favourites-banner {
-  @include banner("favourites-banner.jpg");
+  @include banner("test_02.jpg");
 }
 
 .favourites {
@@ -297,17 +297,24 @@ nav {
 }
 
 .team-banner {
-  @include banner("team-banner.jpg")
+  @include banner("test_02.jpg")
 }
 
 .member-grid {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background: $color-secondary;
-  height: 800px;
+  height: 56vh;
+  padding: 0 190px;
 }
 
 .member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
   &__image img {
     @include rounded-image;
   }
@@ -342,9 +349,11 @@ nav {
 }
 
 .comments {
-  background: $color-primary;
+  background: $color-secondary;
+  height: 91vh;
   &__title {
-
+    text-align: center;
+    padding-top: 35px;
   }
   &__customer {
     display: flex;
@@ -353,6 +362,11 @@ nav {
 }
 
 .customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  margin: 45px;
   &__image img {
     @include rounded-image;
   }
@@ -360,7 +374,9 @@ nav {
     font-family: 'Anton', sans-serif;
   }
   &__testimony-text {
-
+    width: 90%;
+    font-size: 19px;
+    text-align: center;
   }
   &__name {
 

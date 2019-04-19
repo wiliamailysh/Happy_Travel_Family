@@ -1,6 +1,8 @@
 <nav class="nav">
   <div class="nav__logo">
-    <%= image_tag '/assets/navbar/logo.jpg' %>
+    <%= link_to root_path do %>
+      <%= image_tag '/assets/navbar/logo.jpg' %>
+    <% end %>
     <h1>HAPPY TRAVEL<br> FAMILY</h1>
   </div>
   <ul class="nav__item">
