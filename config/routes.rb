@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'tour/index'
+  get '/tours', to: 'tour#index', as: 'tour'
   get '/', to: 'homepage#index', as: 'root'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

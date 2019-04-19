@@ -5,9 +5,9 @@
 /// Border test ///
 /// Copy @include border to check the size and position of an element ///
 
-html,body {
-  margin: 0;
-}
+//////////////
+/// MIXINS ///
+//////////////
 
 @mixin border {
   border: 1px solid red;
@@ -19,14 +19,133 @@ html,body {
   border-radius: 50%;
 }
 
+/////////////////
+/// VARIABLES ///
+/////////////////
+
 /// Colors ///
 $color-primary: white;
 $color-secondary: #F8F5EF;
 $color-tertiary: #A8172E;
 $color-dark: #000000;
+$color-menu-hover: #EAE5EB;
+$color-menu: #726277;
+
+///////////////
+/// GENERAL ///
+///////////////
+
+html,body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: $color-dark;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+hr {
+  width: 20%;
+  color: $color-tertiary;
+}
+
+
+///////////////
+/// ANCHORS ///
+///////////////
+
+/// Put back sections' anchors ///
+a.anchor  {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+}
+
+//////////////
+/// NAVBAR ///
+//////////////
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 95px;
+  width: 100%;
+  background: $color-primary;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  -webkit-box-shadow: 0px 3px 9px -1px rgba(105,105,105,1);
+  -moz-box-shadow: 0px 3px 9px -1px rgba(105,105,105,1);
+  box-shadow: 0px 3px 9px -1px rgba(105,105,105,1);
+  &__logo {
+    display: flex;
+    margin: auto 50px;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+  }
+  &__item {
+    display: flex;
+    margin: auto 50px;
+    li {
+      list-style: none;
+      display: inline-block;
+      // margin-left: 5vw;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      color: $color-menu;
+    }
+  }
+}
+
+.btn {
+  // @include border;
+  padding: 5px 25px;
+  &:hover {
+    background: $color-menu-hover;
+  }
+}
+
+////////////////
+/// HOMEPAGE ///
+////////////////
+
+// background: rgb(0,212,255);
+// background:
 
 .main-banner {
-  background: image-url('image.jpg') right top / cover; // works
+  // background: #eb01a5;
+  // background-image: url("homepage/main-banner.jpg"); /* fallback */
+  background: rgb(0,212,255);
+  // background: linear-gradient(93deg, rgba(0,212,255,0.2665441176470589) 0%, rgba(9,9,121,0.3393732492997199) 56%, rgba(2,0,36,1) 100%), image-url("homepage/main-banner.jpg");
+  background: linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(9,9,121,0.3) 56%, rgba(2,0,36,1) 100%), image-url("homepage/main-banner.jpg") right top / cover;
+  // background: linear-gradient(rgba(26,125,25, 0.4), rgba(19,56,48, 0.4)), url("image.jpg"); /* W3C */
+  // background: image-url('homepage/main-banner.jpg') right top / cover; // works
+  // background-image: image-url('homepage/main-banner.jpg'), linear-gradient(blue, red);
+  background-position: 0px -200px;
   height: 60vh;
   // padding-right: 10vw;
   // padding-top: 10vh;
@@ -35,7 +154,8 @@ $color-dark: #000000;
     font-size: 2.5rem;
     text-align: right;
     padding-right: 10vw;
-    padding-top: 10vh;
+    padding-top: 20vh;
+    text-shadow: 2px 2px black;
   }
   &__author {
     color: $color-primary;
@@ -84,12 +204,16 @@ $color-dark: #000000;
 }
 
 .favourites-banner {
+  background: image-url('image.jpg') right top / cover; // works
+  height: 35vh;
   &__title {
-
+    text-align: center;
   }
-  &__trip {
-    display: flex;
-    justify-content: space-around;
+  &__subtitle {
+    margin: auto;
+    background: rgba($color-secondary,.6);
+    width: 60%;
+    height: 25%;
   }
 }
 
@@ -110,7 +234,7 @@ $color-dark: #000000;
 
 .team-banner {
   background: image-url('image.jpg') right top / cover; // works
-  height: 25vh;
+  height: 35vh;
   &__title {
     text-align: center;
   }
@@ -143,8 +267,7 @@ $color-dark: #000000;
   }
 }
 
-/// Quite the same as team-banner ///
-.destinations-banner {
+.destinations-banner { /// same as team-banner
   background: image-url('image.jpg') right top / cover; // works
   height: 25vh;
   &__title {
@@ -164,7 +287,7 @@ $color-dark: #000000;
 }
 
 .comments {
-  background: $color-secondary;
+  background: $color-primary;
   &__title {
 
   }
@@ -192,111 +315,6 @@ $color-dark: #000000;
   }
 }
 
-/// General ///
-
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: bold;
-  color: $color-dark;
-}
-
-h3 {
-
-}
-
-h4 {
-
-}
-
-hr {
-  width: 20%;
-  color: $color-tertiary;
-}
-
-//// Banner image with quotation ////
-
-#banner {
-  height: 500px;
-  background: image-url('image.jpg') right top / cover; // works
-}
-
-#banner div {
-  font-size: 3em;
-  font-weight: 450;
-  color: white;
-  text-align: right;
-  padding-top: 20vh;
-  margin-right: 8vw;
-
-  // border: 2px solid red;
-}
-
-#banner p {
-  font-size: 2.2em;
-  font-weight: 450;
-  font-style: italic;
-  color: white;
-  text-align: right;
-  margin-right: 8vw;
-
-
-  // border: 2px solid red;
-}
-
-//////////////////////////
-
-//// Slogan banner ////
-
-#slogan {
-  background: #F8F5EF;
-  height: 50vh;
-}
-
-#slogan h2 {
-  margin: 0;
-  padding: 3vh 0 2vh 0;
-
-  font-weight: 750;
-  text-align: center;
-
-  // border: 2px solid red;
-}
-
-#slogan hr {
-  width: 15%;
-}
-
-.feature-container {
-  display: flex;
-  justify-content: space-around;
-
-  padding-left: 15%;
-  padding-right: 15%;
-  border: 2px solid green;
-}
-
-.feature-agency {
-  width: 20%;
-
-  border: 2px solid red;
-}
-
-#favourites {
-  display: none;
-}
-
-#team {
-  display: none;
-}
-
-#destinations {
-  display: none;
-}
-
-#comments {
-  display: none;
-}
+/////////////////
+/// TOUR PAGE ///
+/////////////////
