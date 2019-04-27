@@ -1,0 +1,32 @@
+.team-banner {
+  @include banner("test_02.jpg")
+}
+
+.member-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $color-secondary;
+  height: 56vh;
+  padding: 0 190px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  &__image img {
+    @include rounded-image;
+  }
+  &__name {
+
+  }
+  &__social-link a img {
+    height: 50px;
+  }
+  &__quote {
+
+  }
+}

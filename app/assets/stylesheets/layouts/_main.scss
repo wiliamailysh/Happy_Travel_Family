@@ -1,0 +1,30 @@
+.main-banner {
+  // background: #eb01a5;
+  // background-image: url("homepage/main-banner.jpg"); /* fallback */
+  background: rgb(0,212,255);
+  // background: linear-gradient(93deg, rgba(0,212,255,0.2665441176470589) 0%, rgba(9,9,121,0.3393732492997199) 56%, rgba(2,0,36,1) 100%), image-url("homepage/main-banner.jpg");
+  background: linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(9,9,121,0.3) 56%, rgba(2,0,36,1) 100%), image-url("homepage/main-banner.jpg") right top / cover;
+  // background: linear-gradient(rgba(26,125,25, 0.4), rgba(19,56,48, 0.4)), url("image.jpg"); /* W3C */
+  // background: image-url('homepage/main-banner.jpg') right top / cover; // works
+  // background-image: image-url('homepage/main-banner.jpg'), linear-gradient(blue, red);
+  background-position: 0px -200px;
+  height: 60vh;
+  // padding-right: 10vw;
+  // padding-top: 10vh;
+  &__quote {
+    color: $color-primary;
+    font-size: 2.5rem;
+    text-align: right;
+    padding-right: 10vw;
+    padding-top: 20vh;
+    text-shadow: 2px 2px black;
+  }
+  &__author {
+    color: $color-primary;
+    text-align: right;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-right: 10vw;
+    // @include border;
+  }
+}

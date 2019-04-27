@@ -1,0 +1,37 @@
+.comments {
+  background: $color-secondary;
+  height: 91vh;
+  &__title {
+    text-align: center;
+    padding-top: 35px;
+  }
+  &__customer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  margin: 45px;
+  &__image img {
+    @include rounded-image;
+  }
+  &__testimony-title {
+    font-family: 'Anton', sans-serif;
+  }
+  &__testimony-text {
+    width: 90%;
+    font-size: 19px;
+    text-align: center;
+  }
+  &__name {
+
+  }
+  &__testimony-date {
+
+  }
+}

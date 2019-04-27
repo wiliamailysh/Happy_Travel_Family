@@ -1,0 +1,53 @@
+//////////////
+/// MIXINS ///
+//////////////
+
+// @mixin btn {
+//   border: 2px solid $color-primary;
+//   height: 40px;
+//   width: 165px;
+//   p {
+//     text-decoration: none;
+//     color: red;
+//   }
+// }
+
+@mixin title($size) {
+  font-size: $size;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+  color: $color-primary;
+}
+
+@mixin banner($image) {
+    // background: image-url('homepage/favourites-banner.jpg') right top / cover; // works
+    background: image-url('homepage/#{$image}'); // works
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    &__title {
+      text-align: center;
+      h1 {
+        padding: 45px;
+        margin: 0;
+      }
+    }
+    &__subtitle {
+      margin: auto;
+      background: rgba($color-secondary,.6);
+      width: 60%;
+      height: 25%;
+    }
+  }
+
+@mixin rounded-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+@mixin border {
+  border: 1px solid red;
+}
