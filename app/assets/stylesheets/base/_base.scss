@@ -3,8 +3,10 @@
 ///////////////
 
 html,body {
+  box-sizing: border-box;
+  font-size: 16px;
   margin: 0;
-  font-family: 'Raleway', sans-servif;
+  font-family: 'Raleway', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -13,20 +15,23 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  @include title(62px);
+  font-size: 3rem;
+  color: $color-primary;
+  letter-spacing: 0.05em;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
   color: $color-dark;
 }
 
 h3 {
-  @include title(20px);
+  font-size: 1.6rem;
 }
 
 h4 {
-
+  font-size: 1.2rem;
 }
 
 hr {
