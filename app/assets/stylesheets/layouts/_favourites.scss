@@ -9,36 +9,34 @@
   height: 56vh;
 }
 
-.trip {
-  background: image-url("image.jpg") right top / cover;
-  // , image-url('image.jpg') right top / cover; // works
-  height: 312px;
-  width: 489px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  a {
-    text-decoration: none;
-  }
-  &__hidden-description {
-    display: none;
-  }
-  &__title {
-
-  }
-  &__link {
-    border: 2px solid $color-primary;
-    height: 40px;
-    width: 165px;
-    color: $color-primary;
-    font-size: 19px;
-    font-style: italic;
-    font-weight: bold;
-    margin: 15px;
-    display: flex;
-    p {
-      margin: auto;
-    }
-  }
+.favourites .trip {
+  @include card-trip(450px, 300px);
 }
+
+
+// .trip {
+//   background: image-url("image.jpg") right top / cover;
+//   // , image-url('image.jpg') right top / cover; // works
+//   // height: 250px;
+//   // width: 20vw;
+//   // padding: 4rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   align-items: center;
+//   a {
+//     text-decoration: none;
+//   }
+//   &__hidden-description {
+//     display: none;
+//   }
+//   &__title {
+//
+//   }
+//   &__link {
+//     @include button;
+//     p {
+//       margin: auto;
+//     }
+//   }
+// }
