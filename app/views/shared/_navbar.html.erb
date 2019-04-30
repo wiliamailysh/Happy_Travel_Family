@@ -1,8 +1,6 @@
 <nav class="nav">
   <div class="nav__logo">
-    <%= link_to root_path do %>
-      <%= image_tag '/assets/navbar/logo.jpg' %>
-    <% end %>
+    <%= image_tag '/assets/navbar/logo.jpg' %>
     <h1>HAPPY TRAVEL<br> FAMILY</h1>
   </div>
   <ul class="nav__item">
@@ -11,7 +9,7 @@
     <a href="/#favourites-anchor"><li class="btn-nav">COUP DE COEUR</li></a>
     <a href="/#team-anchor"><li class="btn-nav">L'EQUIPE</li></a>
     <%= link_to tour_path do %>
-      <li class="btn">TOURS</li>
+      <li class="btn-nav">TOURS</li>
     <% end %>
   </ul>
 </nav>
