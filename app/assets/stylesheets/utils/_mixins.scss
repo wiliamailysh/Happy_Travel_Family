@@ -110,10 +110,10 @@
 
 // Mixin for specific font-size
 @mixin font-size($extralarge,$large,$tablet,$phone) {
-  @media all and (min-width: 1441px) {
+  @media all and (min-width: 1442px) {
       font-size: $extralarge;
   }
-  @media all and (max-width: 1400px) and (min-width: 769px) {
+  @media all and (max-width: 1441px) and (min-width: 769px) {
       font-size: $large;
   }
   @media all and (max-width: 768px) and (min-width: 426px) {

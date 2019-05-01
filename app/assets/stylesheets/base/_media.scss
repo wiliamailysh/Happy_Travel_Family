@@ -16,12 +16,12 @@
 // }
 
 :root {
-  @media all and (min-width: 1441px) {
+  @media all and (min-width: 1442px) {
     --h1: 4rem;
     --h2: 2.2rem;
     --h3: 1.5rem;
   }
-  @media all and (max-width: 1400px) and (min-width: 769px) {
+  @media all and (max-width: 1441px) and (min-width: 769px) {
     --h1: 2rem;
     --h2: 1.8rem;
     --h3: 1rem;
@@ -40,10 +40,10 @@
 
 // Font-size depending on viewport width
 html {
-  @media all and (min-width: 1441px) {
+  @media all and (min-width: 1442px) {
       font-size: 20px;
   }
-  @media all and (max-width: 1400px) and (min-width: 769px) {
+  @media all and (max-width: 1441px) and (min-width: 769px) {
       font-size: 16px;
   }
   @media all and (max-width: 768px) and (min-width: 426px) {
