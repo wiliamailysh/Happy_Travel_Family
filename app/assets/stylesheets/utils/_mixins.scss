@@ -2,16 +2,6 @@
 /// MIXINS ///
 //////////////
 
-// @mixin btn {
-//   border: 2px solid $color-primary;
-//   height: 40px;
-//   width: 165px;
-//   p {
-//     text-decoration: none;
-//     color: red;
-//   }
-// }
-
 @mixin title($size) {
   font-size: $size;
   font-weight: bold;
@@ -94,8 +84,8 @@
   justify-content: flex-end;
   align-items: center;
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), image-url("image.jpg") right top / cover;
-  min-width: $width;
-  min-height: $height;
+  width: $width;
+  height: $height;
   margin: 2rem;
   &__title {
     color: $color-primary;

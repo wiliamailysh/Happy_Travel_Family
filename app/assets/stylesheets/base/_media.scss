@@ -17,39 +17,31 @@
 
 :root {
   @media all and (min-width: 1442px) {
-    --h1: 4rem;
-    --h2: 2.2rem;
-    --h3: 1.5rem;
+    --h1: 8rem;
+    --h2: 4.4rem;
+    --h3: 3rem;
+    --p: 1rem;
   }
-  @media all and (max-width: 1441px) and (min-width: 769px) {
-    --h1: 2rem;
+  @media all and (min-width: 769px) and (max-width: 1441px) {
+    --h1: 3rem;
+    --h2: 1.8rem;
+    --h3: 1.6rem;
+    --p: 1rem;
+  }
+  @media all and (min-width: 426px) and (max-width: 768px) {
+    --h1: 3.5rem;
     --h2: 1.8rem;
     --h3: 1rem;
-  }
-  @media all and (max-width: 768px) and (min-width: 426px) {
-    --h1: 2rem;
-    --h2: 1.8rem;
-    --h3: 1rem;
+    --p: 1rem;
   }
   @media all and (max-width: 425px) {
     --h1: 2rem;
     --h2: 1.8rem;
     --h3: 1rem;
+    --p: 1rem;
   }
 }
 
-// Font-size depending on viewport width
 html {
-  @media all and (min-width: 1442px) {
-      font-size: 20px;
-  }
-  @media all and (max-width: 1441px) and (min-width: 769px) {
-      font-size: 16px;
-  }
-  @media all and (max-width: 768px) and (min-width: 426px) {
-      font-size: 10px;
-  }
-  @media all and (max-width: 425px) {
-      font-size: 7px;
-  }
+  font-size: 10px;
 }
