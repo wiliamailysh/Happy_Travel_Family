@@ -1,0 +1,36 @@
+// / Font-size Media queries
+@media screen and (max-width: 576px) {
+  :root {
+    --h1: 2rem;
+    --h2: 1.8rem;
+    --h3: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  :root {
+    --h1: 2rem;
+    --h2: 1.8rem;
+    --h3: 1.8rem;
+  }
+}
+
+// @media all and (min-width: 1441px) {
+//
+// }
+//
+// @media all and (max-width: 1400px) and (min-width: 1025px) {
+//
+// }
+//
+// @media all and (max-width: 1024px) and (min-width: 769px) {
+//
+// }
+//
+// @media all and (max-width: 768px) and (min-width: 426px) {
+//
+// }
+//
+// @media all and (max-width: 425px) {
+//
+// }

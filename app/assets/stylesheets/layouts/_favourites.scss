@@ -10,7 +10,33 @@
 }
 
 .favourites .trip {
-  @include card-trip(500px, 350px);
+  @include card-trip(650px, 400px);
+}
+
+@media all and (min-width: 1441px) {
+  .favourites .trip {
+    @include card-trip(650px, 400px);
+  }
+}
+@media all and (max-width: 1400px) and (min-width: 1025px) {
+  .favourites .trip {
+    @include card-trip(650px, 400px);
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 769px) {
+  .favourites .trip {
+    @include card-trip(650px, 400px);
+  }
+}
+@media all and (max-width: 768px) and (min-width: 426px) {
+  .favourites .trip {
+    @include card-trip(650px, 400px);
+  }
+}
+@media all and (max-width: 425px) {
+  .favourites .trip {
+    @include card-trip(650px, 400px);
+  }
 }
 
 

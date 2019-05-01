@@ -9,29 +9,3 @@ $color-tertiary: #A8172E;
 $color-dark: #000000;
 $color-menu-hover: #EAE5EB;
 $color-menu: #726277;
-
-
-// / Font-size Media queries
-@media screen and (max-width: 576px) {
-  :root {
-    --h1: 2rem;
-    --h2: 1.8rem;
-    --h3: 1rem;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  :root {
-    --h1: 2rem;
-    --h2: 1.8rem;
-    --h3: 1.8rem;
-  }
-}
-
-// @media screen and (min-width: 576px) and (max-width: 720px) {
-//   :root {
-//     --h1: 2rem;
-//     --h2: 1.8rem;
-//     --h3: 1.6rem;
-//   }
-// }
