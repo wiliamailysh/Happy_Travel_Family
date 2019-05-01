@@ -1,20 +1,3 @@
-// // / Font-size Media queries
-// @media screen and (max-width: 576px) {
-//   :root {
-//     --h1: 2rem;
-//     --h2: 1.8rem;
-//     --h3: 1rem;
-//   }
-// }
-//
-// @media screen and (min-width: 720px) {
-//   :root {
-//     --h1: 2rem;
-//     --h2: 1.8rem;
-//     --h3: 1.8rem;
-//   }
-// }
-
 :root {
   @media all and (min-width: 1442px) {
     --h1: 8rem;
@@ -40,8 +23,4 @@
     --h3: 1rem;
     --p: 1rem;
   }
-}
-
-html {
-  font-size: 10px;
 }
