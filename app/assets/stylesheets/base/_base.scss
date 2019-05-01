@@ -19,21 +19,16 @@ h1 {
   color: $color-primary;
   letter-spacing: 0.05em;
   text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
-  border: 8px solid red;
+  // border: 8px solid red;
 }
 
 h2 {
   font-size: var(--h2);
   color: $color-dark;
-  border: 8px solid orange;
+  // border: 8px solid orange;
 }
 
 h3 {
   font-size: var(--h3);
-  border: 8px solid yellow;
-}
-
-hr {
-  width: 20%;
-  color: $color-tertiary;
+  // border: 8px solid yellow;
 }
