@@ -10,32 +10,32 @@
 }
 
 .favourites .trip {
-  @include card-trip(650px, 400px);
+  @include card-trip(489px, 250px);
 }
 
 @media all and (min-width: 1441px) {
   .favourites .trip {
-    @include card-trip(650px, 400px);
+    @include card-trip(489px, 250px);
   }
 }
-@media all and (max-width: 1400px) and (min-width: 1025px) {
+@media all and (min-width: 1025px) and (max-width: 1440px) {
   .favourites .trip {
-    @include card-trip(650px, 400px);
+    @include card-trip(489px, 250px);
   }
 }
-@media all and (max-width: 1024px) and (min-width: 769px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
   .favourites .trip {
-    @include card-trip(650px, 400px);
+    @include card-trip(489px, 250px);
   }
 }
-@media all and (max-width: 768px) and (min-width: 426px) {
+@media all and (min-width: 426px) and (max-width: 768px) {
   .favourites .trip {
-    @include card-trip(650px, 400px);
+    @include card-trip(489px, 250px);
   }
 }
 @media all and (max-width: 425px) {
   .favourites .trip {
-    @include card-trip(650px, 400px);
+    @include card-trip(489px, 250px);
   }
 }
 
