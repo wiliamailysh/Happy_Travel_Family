@@ -9,60 +9,33 @@
   height: 56vh;
 }
 
-.favourites .trip {
-  @include card-trip(489px, 250px);
-}
-
+// Extra-large 4K
 @media all and (min-width: 1441px) {
   .favourites .trip {
-    @include card-trip(489px, 250px);
+    @include card-trip($width * 2, $height * 2);
   }
 }
-@media all and (min-width: 1025px) and (max-width: 1440px) {
+// Large Desktop
+@media all and (min-width: 769px) and (max-width: 1440px) {
   .favourites .trip {
-    @include card-trip(489px, 250px);
+    @include card-trip($width * 1.2, $height * 1.2);
   }
 }
-@media all and (min-width: 769px) and (max-width: 1024px) {
-  .favourites .trip {
-    @include card-trip(489px, 250px);
-  }
-}
+// Tablette
 @media all and (min-width: 426px) and (max-width: 768px) {
   .favourites .trip {
-    @include card-trip(489px, 250px);
+    @include card-trip($width, $height);
   }
 }
+// Smartphone
 @media all and (max-width: 425px) {
+  .favourites {
+    flex-direction: column;
+    height: 100%;
+  }
   .favourites .trip {
-    @include card-trip(489px, 250px);
+    @include card-trip(90%, $height);
+    display: flex;
+    justify-content: center;
   }
 }
-
-
-// .trip {
-//   background: image-url("image.jpg") right top / cover;
-//   // , image-url('image.jpg') right top / cover; // works
-//   // height: 250px;
-//   // width: 20vw;
-//   // padding: 4rem;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   align-items: center;
-//   a {
-//     text-decoration: none;
-//   }
-//   &__hidden-description {
-//     display: none;
-//   }
-//   &__title {
-//
-//   }
-//   &__link {
-//     @include button;
-//     p {
-//       margin: auto;
-//     }
-//   }
-// }
