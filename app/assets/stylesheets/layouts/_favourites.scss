@@ -9,6 +9,15 @@
   height: 56vh;
 }
 
+// JavaScript classes
+.trip__description--block {
+  display: block;
+}
+
+.trip__description--hidden {
+  display: none;
+}
+
 // Extra-large 4K
 @media all and (min-width: 1441px) {
   .favourites .trip {

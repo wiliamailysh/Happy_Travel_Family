@@ -1,6 +1,7 @@
 nav {
   position: fixed;
   top: 0;
+  z-index: 10;
   height: 95px;
   width: 100%;
   background: $color-primary;

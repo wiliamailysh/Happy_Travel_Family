@@ -89,6 +89,7 @@
 }
 
 @mixin card-trip($width, $height) {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -103,8 +104,19 @@
   &__link {
     @include button;
   }
-  &__hidden-description {
-    display: none;
+  &__description {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    width: 100%;
+    min-height: 40%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    & p {
+      padding: 3rem;
+    }
   }
 }
 
