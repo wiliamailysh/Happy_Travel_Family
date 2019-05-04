@@ -18,6 +18,26 @@
   display: none;
 }
 
+.trip__image--upscaled {
+  transform: scale(1.1);
+  transition: all .5s;
+}
+
+.trip__image--downscaled {
+  transform: scale(1);
+  transition: all .5s;
+}
+
+.trip__image {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), image-url("image.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 // Extra-large 4K
 @media all and (min-width: 1441px) {
   .favourites .trip {

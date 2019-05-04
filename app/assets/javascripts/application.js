@@ -18,30 +18,24 @@
 // Load DOM
 document.addEventListener("turbolinks:load", function() {
 
-  // alert('Hello');
-
+  // Variables
   let enSavoirPlus = Array.from(document.querySelectorAll('.trip__link'));
-  console.log(enSavoirPlus);
   let tripDescription = Array.from(document.querySelectorAll('.trip__description'));
+  let image = Array.from(document.querySelectorAll('.trip__image'));
 
   for (let i = 0; i < enSavoirPlus.length; i++) {
     enSavoirPlus[i].addEventListener('mouseover', (e) => {
       tripDescription[i].classList.remove("trip__description--hidden");
       tripDescription[i].classList.add("trip__description--block");
-      // console.log(`Message ${i}`);
+      image[i].classList.remove('trip__image--downscaled');
+      image[i].classList.add('trip__image--upscaled');
     })
     enSavoirPlus[i].addEventListener('mouseout', (e) => {
       tripDescription[i].classList.remove("trip__description--block");
       tripDescription[i].classList.add("trip__description--hidden");
+      image[i].classList.remove('trip__image--upscaled');
+      image[i].classList.add('trip__image--downscaled');
     })
   }
 
-//   // enSavoirPlus.forEach((e) => {
-//   //     e.addEventListener("mouseover", (e, index) => {
-//   //         // alert('Click');
-//   //         tripDescription[index].classList.remove("trip__description--hidden");
-//   //         tripDescription[index].classList.add("trip__description--block");
-//   //       })
-//   //   })
-//
 });

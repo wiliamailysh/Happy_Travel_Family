@@ -89,20 +89,22 @@
 }
 
 @mixin card-trip($width, $height) {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  // background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), image-url("image.jpg") right top / cover;
   width: $width;
   height: $height;
   margin: 2rem;
   &__title {
     color: $color-primary;
+    z-index: 10;
   }
   &__link {
     @include button;
+    z-index: 10;
   }
   &__description {
     position: absolute;
@@ -114,6 +116,7 @@
     font-weight: bold;
     font-size: 1.8rem;
     text-align: center;
+    z-index: 10;
     & p {
       padding: 3rem;
     }
