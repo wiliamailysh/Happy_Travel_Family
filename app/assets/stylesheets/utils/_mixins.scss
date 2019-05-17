@@ -11,16 +11,20 @@
 }
 
 @mixin banner($image) {
+  @media screen and (max-width: 425px) {
+    background-size: auto 100%;
+  }
     // background: image-url('homepage/favourites-banner.jpg') right top / cover; // works
     background: image-url('homepage/#{$image}'); // works
     height: 35vh;
+    height: auto;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100%;
     background-attachment: fixed;
     &__title {
       text-align: center;
       h1 {
-        padding: 45px;
+        padding: 6rem;
         margin: 0;
       }
     }
