@@ -50,6 +50,7 @@
     @include card-trip($width * 1.2, $height * 1.2);
   }
 }
+
 // Tablette
 @media all and (min-width: 426px) and (max-width: 768px) {
   .favourites .trip {

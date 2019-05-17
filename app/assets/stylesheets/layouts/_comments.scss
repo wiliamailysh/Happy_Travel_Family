@@ -11,22 +11,41 @@
   }
 }
 
+@media all and (max-width: 425px) {
+  .customer {
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+  .comments__customer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .customer {
+  // border: 1px solid $color-dark;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25vw;
-  margin: 45px;
+  // margin: 45px;
   &__image img {
     @include rounded-image;
   }
   &__testimony-title {
-    font-family: 'Anton', sans-serif;
+    // font-family: 'Anton', sans-serif;
+    text-align: center;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    // @include border;
   }
   &__testimony-text {
-    width: 90%;
-    font-size: 19px;
+    width: 70%;ont-size: 19px;
+    @include font-size(2rem,1.6rem,1.2rem,1.2rem);
     text-align: center;
+    // padding: 2rem;
+    // @include border;
   }
   &__name {
 

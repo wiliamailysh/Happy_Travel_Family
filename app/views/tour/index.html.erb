@@ -13,7 +13,7 @@
   <div class="trip-preview-container">
     <% @tours.each do |tour| %>
     <div class="trip">
-      <div class="trip__hidden-description">
+      <div class="trip__description trip__description--hidden">
         <p><%= tour.description %></p>
       </div>
       <div class="trip__title">
@@ -24,6 +24,7 @@
           <p>En savoir plus</p>
         <% end %>
       </div>
+      <div class="trip__image"></div>
     </div>
     <% end %>
   </div>
