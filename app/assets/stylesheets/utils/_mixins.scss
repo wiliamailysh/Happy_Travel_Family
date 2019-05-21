@@ -11,7 +11,7 @@
 }
 
 @mixin banner($image) {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 800px) {
     background-size: auto 100%;
   }
     // background: image-url('homepage/favourites-banner.jpg') right top / cover; // works

@@ -3,9 +3,16 @@
   background-color: $color-secondary;
   &__quote {
     background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(9,9,121,0.3) 56%, rgba(2,0,36,1) 100%), image-url("homepage/main-banner.jpg") right top / cover;
-    background-position: 0px -200px;
-    height: 50vh;
+    background: linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(9,9,121,0.3) 56%, rgba(2,0,36,1) 100%) repeat, image-url("homepage/main-banner.jpg") no-repeat;
+    @media screen and (max-width:425px) {
+      background-position: center;
+    }
+    @media screen and (min-width:426px) {
+      // background-position: 0px -200px;
+    }
+    background-size: cover;
+    height: 100vh;
+    // height: 500px;
   }
   &__content {
     min-height: 40vh;
